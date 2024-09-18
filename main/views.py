@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.urls import reverse
 import datetime
 
+# Login
 @login_required(login_url='/login')
 def show_main(request):
     mood_entries = MoodEntry.objects.filter(user=request.user)
